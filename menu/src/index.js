@@ -2,8 +2,20 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
+import { Provider } from "react-redux";
+import { createStore, applyMiddleware } from "redux";
+import reduxThunk from "redux-thunk";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+import reducers from "./reducers";
+
+const createStoreWithMiddleware = applyMiddleware(reduxThunk)(createStore);
+
+ReactDOM.render(
+  <Provider store={createStoreWithMiddleware(reducers)}>
+    <App />
+  </Provider>,
+  document.getElementById("root")
+);
 
 /* If want to use web components */
 // class Header extends HTMLElement {

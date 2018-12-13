@@ -40,6 +40,7 @@ Under development
 - Improve SSR for react
 - Handle cross event (with native customEvent)
 - Share state if needed (i know micro frontends is isolated for each service but sometimes we need to share state beetwen fragment (services))
-- Improve setting development mode
+- Improve setting development mode (env config, hot reload, etc)
 - Improve testing for integration testing
 - Repository will use monorepo or submodule
+- Public URL
