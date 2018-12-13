@@ -42,3 +42,4 @@ Under development
 - Share state if needed (i know micro frontends is isolated for each service but sometimes we need to share state beetwen fragment (services))
 - Improve setting development mode
 - Improve testing for integration testing
+- Repository will use monorepo or submodule
