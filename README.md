@@ -17,7 +17,7 @@ We need install some library or tools which is used by this project.
 
 Under development
 
-Just run `./start.sh` in your root project, it will automatically running each project (services)
+For now to run each project u should go inside each project folder then type `npm run start:prod`. Later we will use docker compose.
 
 ### Running Test
 
@@ -38,7 +38,7 @@ Under development
 - Strugling with best structure. Currently as orchestration we handle in backend but i realize web component already coming in few modern browser as native feature.
 - Routing : still figure out the right way (and the best way) to do it
 - Improve SSR for react
-- Handle cross event (currently use native DOM)
+- Handle cross event (with native customEvent)
 - Share state if needed (i know micro frontends is isolated for each service but sometimes we need to share state beetwen fragment (services))
 - Improve setting development mode
 - Improve testing for integration testing

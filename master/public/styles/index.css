@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #cccccc;
+}
+
+#menu {
+  width: 30%;
+  margin: 1% 2% 0 2%;
+  padding: 1%;
+  float: left;
+  background-color: white;
+}
+
+#content {
+  width: 60%;
+  margin: 1% 2% 0 0;
+  padding: 1%;
+  float: left;
+  background-color: white;
+}

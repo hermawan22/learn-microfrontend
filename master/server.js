@@ -4,17 +4,19 @@ const request = require("request");
 
 server.set("view engine", "ejs");
 
+server.use(express.static(__dirname + "/public"));
+
 server.get("/", (req, res) =>
   Promise.all([
     getContents("http://localhost:8081/"),
-    getContents("http://localhost:8082/")
-    // getContents("https://microfrontends-cart.herokuapp.com/")
+    getContents("http://localhost:8082/"),
+    getContents("http://localhost:8083/")
   ])
     .then(responses => {
       res.render("index", {
         header: responses[0],
-        menu: responses[1]
-        // cart: responses[2]
+        menu: responses[1],
+        content: responses[2]
       });
     })
     .catch(error => res.send(error.message))
@@ -29,9 +31,7 @@ const getContents = url =>
     });
   });
 
-// server.get("/", (req, res) => res.render("index"));
-
 const port = process.env.PORT || 8080;
 server.listen(port, () => {
-  console.log(`Homepage listening on port ${port}`);
+  console.log(`Listening on port ${port}`);
 });

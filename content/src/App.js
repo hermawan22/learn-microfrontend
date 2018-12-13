@@ -1,14 +1,15 @@
 import React, { Component } from "react";
 
 class App extends Component {
+  componentDidMount() {
+    window.addEventListener("clicked", event => {
+      alert("hello!!");
+    });
+  }
   render() {
     return (
       <div className="App">
-        <div
-          style={{ backgroundColor: "#4d50ab", color: "white", padding: "2%" }}
-        >
-          Content
-        </div>
+        <div>Content</div>
       </div>
     );
   }

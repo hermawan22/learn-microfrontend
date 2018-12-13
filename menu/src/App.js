@@ -1,14 +1,17 @@
 import React, { Component } from "react";
 
 class App extends Component {
+  crossApp(info) {
+    const event = new CustomEvent("clicked", { info });
+    window.dispatchEvent(event);
+    console.log(info);
+  }
+
   render() {
     return (
       <div className="App">
-        <div
-          style={{ backgroundColor: "#4d50ab", color: "white", padding: "2%" }}
-        >
-          Menu
-        </div>
+        <div>Menu</div>
+        <div onClick={this.crossApp.bind(this, "clicked")}>Click me!</div>
       </div>
     );
   }
