@@ -23,7 +23,7 @@ For now to run each project u should go inside each project (header, menu, conte
 
 Under development
 
-- For unit test : just go inside of each project then type 'npm run test'
+- For unit test : just go inside of each project then type `npm run test`
 
 `in the future we need integration test`
 
@@ -43,7 +43,7 @@ Under development
 - Improve testing for integration testing
 - Repository will use monorepo or submodule
 
-# What need to fix :
+## What need to fix :
 
 - Redux in SSR
 - Public URL
