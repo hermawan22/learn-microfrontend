@@ -1,9 +1,8 @@
 import {
   FETCH_DATA_START,
-  RECEIVE_DATA_REPOS,
   RECEIVE_DATA,
   FETCH_DATA_ERROR
-} from "../actions/userDetails";
+} from "../actions/index";
 const INTIAL_STATE = {
   data: [],
   fetching: false,

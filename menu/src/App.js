@@ -1,6 +1,12 @@
 import React, { Component } from "react";
+// import { connect } from "react-redux";
+// import { fetchData } from "./actions/index";
 
 class App extends Component {
+  // componentDidMount() {
+  //   // this.props.fetchData();
+  // }
+
   crossApp(info) {
     const event = new CustomEvent("clicked", { info });
     window.dispatchEvent(event);
@@ -16,5 +22,17 @@ class App extends Component {
     );
   }
 }
+
+// const mapStateToProps = state => {
+//   return {
+//     data: state.data.data,
+//     fetching: state.data.fetching
+//   };
+// };
+
+// export default connect(
+//   mapStateToProps,
+//   { fetchData }
+// )(App);
 
 export default App;
